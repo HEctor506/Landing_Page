@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Pana - Tu Negocio Organizado por WhatsApp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #5B4FC1 0%, #7C6FD6 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #5B4FC1 0%, #7C6FD6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(91, 79, 193, 0.2);
+        }
+        
+        .chat-bubble {
+            border-radius: 18px;
+            padding: 12px 16px;
+            margin: 8px 0;
+            max-width: 85%;
+        }
+        
+        .chat-bubble-user {
+            background: #E8E5F7;
+            margin-left: auto;
+        }
+        
+        .chat-bubble-bot {
+            background: white;
+            border: 2px solid #E5E7EB;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Floating CTA Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="#cta" class="bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-full shadow-2xl font-semibold flex items-center gap-2 hover-lift">
+            <span>🚀 Prueba Gratis</span>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="img/logo.png" alt="Mi Pana" class="w-20 h-20">
+                <span class="text-2xl font-bold gradient-text">MI PANA</span>
+            </div>
+            <nav class="hidden md:flex gap-6">
+                <a href="#como-funciona" class="text-gray-600 hover:text-purple-600 font-medium">Cómo Funciona</a>
+                <a href="#beneficios" class="text-gray-600 hover:text-purple-600 font-medium">Beneficios</a>
+                <a href="#testimonios" class="text-gray-600 hover:text-purple-600 font-medium">Testimonios</a>
+            </nav>
+            <a href="#cta" class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg font-semibold">
+                Empezar Gratis
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 px-4 overflow-hidden">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="slide-in">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    Controla tu negocio hablando por WhatsApp
+                </h1>
+                <p class="text-xl mb-8 text-purple-100">
+                    Olvídate de cuadernos y Excel complicados. Registra inventario, gastos y ventas en segundos, solo hablando. 
+                    <span class="font-semibold">Tu negocio organizado automáticamente.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#cta" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover-lift text-center">
+                        Comenzar mi Prueba Gratis
+                    </a>
+                    <a href="#demo" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-50 hover-lift text-center">
+                        Ver Demo
+                    </a>
+                </div>
+                <p class="mt-4 text-sm text-purple-100">
+                    ✓ 30 días gratis &nbsp;&nbsp; ✓ Sin tarjeta de crédito &nbsp;&nbsp; ✓ Soporte incluido
+                </p>
+            </div>
+            
+            <div class="float-animation">
+                <div class="bg-white rounded-3xl shadow-2xl p-6 max-w-md mx-auto">
+                    <div class="bg-gray-100 rounded-2xl p-4 mb-4">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="https://i.imgur.com/YourImageURL.png" alt="Mi Pana" class="w-12 h-12 rounded-full" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold" style="display:none">MP</div>
+                            <div>
+                                <div class="font-semibold text-gray-800">Mi pana</div>
+                                <div class="text-xs text-green-600">● En línea</div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="chat-bubble chat-bubble-user">
+                                <p class="text-sm text-gray-800">
+                                    Recibí 5 cajas de Coca-Cola, 24 unidades cada una, del proveedor Distribuidora López
+                                </p>
+                            </div>
+                            
+                            <div class="chat-bubble chat-bubble-bot">
+                                <p class="text-sm text-gray-800 font-semibold mb-2">✅ ¡Registrado exitosamente!</p>
+                                <p class="text-xs text-gray-600">
+                                    • 120 unidades de Coca-Cola<br>
+                                    • Proveedor: Distribuidora López<br>
+                                    • Agregado a tu inventario
+                                </p>
+                            </div>
+                            
+                            <div class="chat-bubble chat-bubble-user">
+                                <p class="text-sm text-gray-800">
+                                    Vendí 15 Coca-Colas a $0.50
+                                </p>
+                            </div>
+                            
+                            <div class="chat-bubble chat-bubble-bot">
+                                <p class="text-sm text-gray-800 font-semibold mb-2">💰 Venta registrada</p>
+                                <p class="text-xs text-gray-600">
+                                    • Ingreso: $7.50<br>
+                                    • Quedan: 105 unidades<br>
+                                    • Stock: 🟢 Bueno
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section id="como-funciona" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800">
+                Tan simple como <span class="gradient-text">conversar</span>
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+                No necesitas ser experto en tecnología. Si sabes usar WhatsApp, ya sabes usar Mi Pana.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center hover-lift bg-gray-50 p-8 rounded-2xl">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">1. Habla naturalmente</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Envía un mensaje de voz o texto a WhatsApp describiendo lo que compraste, vendiste o gastaste. Como hablarías con un amigo.
+                    </p>
+                </div>
+                
+                <div class="text-center hover-lift bg-gray-50 p-8 rounded-2xl">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">2. Mi Pana entiende</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        La inteligencia artificial extrae automáticamente: producto, cantidad, precio, proveedor y categoría. Sin formularios aburridos.
+                    </p>
+                </div>
+                
+                <div class="text-center hover-lift bg-gray-50 p-8 rounded-2xl">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">3. Todo se registra</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Tu inventario y finanzas se actualizan en tiempo real en Google Sheets. Reportes automáticos cada semana con semáforos de alerta.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section id="beneficios" class="py-20 px-4 bg-gradient-to-br from-purple-50 to-indigo-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-800">
+                ¿Por qué los comerciantes eligen Mi Pana?
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Sin apps complicadas</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Solo WhatsApp, que ya usas todos los días. No tienes que aprender ningún programa nuevo ni descargar nada. Empiezas en menos de 5 minutos.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                    <div class="text-4xl mb-4">⏱️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Ahorra hasta 2 horas diarias</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Registra en 10 segundos lo que antes te tomaba 5 minutos. Dedica ese tiempo a vender más o a tu familia, no a llenar cuadernos.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Reportes automáticos cada semana</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Recibe un reporte con semáforo 🟢🟡🔴 que te dice: qué se vende más, qué está por vencerse, cuánto ganaste. Sin hacer cálculos.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Recupera dinero perdido</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Deja de perder por productos vencidos, robos hormiga o malos precios. Comerciantes como tú recuperan hasta $200 mensuales que se "perdían".
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Tus datos seguros</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Todo se guarda en tu cuenta personal de Google Drive. Nadie más puede ver tu información. Tú eres el dueño de tus datos.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Toma mejores decisiones</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Sabe exactamente qué comprar, cuánto comprar y a qué precio vender. Basado en datos reales de tu negocio, no en corazonadas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo/Ejemplos -->
+    <section id="demo" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800">
+                Mira qué fácil es registrar todo
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+                Estos son ejemplos reales de cómo comerciantes usan Mi Pana cada día
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-purple-50 rounded-2xl p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white text-2xl">
+                            📦
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Entrada de Producto</h3>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 mb-4">
+                        <p class="text-gray-600 italic mb-2">Tú escribes o dices:</p>
+                        <p class="text-gray-800 font-medium">"Compré 10 cajas de arroz, 12 fundas cada una, a Distribuidora San Jorge, me costaron $2.50 cada funda y voy a vender a $3.20"</p>
+                    </div>
+                    <div class="bg-purple-600 text-white rounded-xl p-6">
+                        <p class="font-bold mb-2">✅ Mi Pana registra:</p>
+                        <ul class="text-sm space-y-1">
+                            <li>• Producto: Arroz</li>
+                            <li>• Cantidad: 120 fundas</li>
+                            <li>• Proveedor: Distribuidora San Jorge</li>
+                            <li>• Costo unitario: $2.50</li>
+                            <li>• Precio venta: $3.20</li>
+                            <li>• Ganancia potencial: $84.00</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-green-50 rounded-2xl p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl">
+                            💸
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Registro de Venta</h3>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 mb-4">
+                        <p class="text-gray-600 italic mb-2">Tú escribes o dices:</p>
+                        <p class="text-gray-800 font-medium">"Vendí 25 fundas de arroz a $3.20"</p>
+                    </div>
+                    <div class="bg-green-600 text-white rounded-xl p-6">
+                        <p class="font-bold mb-2">💰 Mi Pana calcula:</p>
+                        <ul class="text-sm space-y-1">
+                            <li>• Ingreso: $80.00</li>
+                            <li>• Ganancia: $17.50</li>
+                            <li>• Quedan: 95 fundas</li>
+                            <li>• Stock: 🟢 Suficiente</li>
+                            <li>• Días para agotarse: ~12 días</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-red-50 rounded-2xl p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl">
+                            ⚠️
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Producto Vencido</h3>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 mb-4">
+                        <p class="text-gray-600 italic mb-2">Tú escribes:</p>
+                        <p class="text-gray-800 font-medium">"3 yogures se vencieron"</p>
+                    </div>
+                    <div class="bg-red-600 text-white rounded-xl p-6">
+                        <p class="font-bold mb-2">🔴 Mi Pana registra:</p>
+                        <ul class="text-sm space-y-1">
+                            <li>• Pérdida: $4.50</li>
+                            <li>• Motivo: Vencido</li>
+                            <li>• Alerta: Comprar menos la próxima vez</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl">
+                            📈
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Reporte Semanal</h3>
+                    </div>
+                    <div class="bg-blue-600 text-white rounded-xl p-6">
+                        <p class="font-bold mb-3">📊 Tu semana del 13-19 Enero:</p>
+                        <ul class="text-sm space-y-2">
+                            <li>• Ventas totales: $847.50</li>
+                            <li>• Gastos: $623.00</li>
+                            <li>• <span class="font-bold">Ganancia: $224.50</span></li>
+                            <li class="pt-2 border-t border-blue-400">🟢 Productos más vendidos: Arroz, Aceite</li>
+                            <li>🟡 Por agotarse: Azúcar (quedan 15)</li>
+                            <li>🔴 Por vencer: 8 yogures (fecha 25/01)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800">
+                Lo que dicen los comerciantes
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-16">
+                Negocios como el tuyo ya están ahorrando tiempo y dinero
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-2xl">
+                            👩
+                        </div>
+                    
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        "Mi mamá que tiene 58 años lo usa perfectamente. Si ella puede, cualquiera puede. Es como hablar por WhatsApp con un amigo que te ayuda a organizar todo."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="cta" class="gradient-bg text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Empieza a organizar tu negocio hoy
+            </h2>
+            <p class="text-xl mb-8 text-purple-100">
+                Únete a los comerciantes que ya están ahorrando tiempo y recuperando dinero perdido
+            </p>
+            
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl max-w-2xl mx-auto">
+                <div class="mb-8">
+                    <div class="text-6xl font-bold gradient-text mb-2">3 meses GRATIS</div>
+                    <p class="text-gray-600">Luego solo $15/mes • Cancela cuando quieras</p>
+                </div>
+                
+                <div class="space-y-4 mb-8">
+                    <input type="text" placeholder="Tu nombre" class="w-full px-6 py-4 rounded-lg border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-800">
+                    <input type="tel" placeholder="Tu número de WhatsApp" class="w-full px-6 py-4 rounded-lg border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-800">
+                    <input type="text" placeholder="Nombre de tu tienda" class="w-full px-6 py-4 rounded-lg border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-800">
+                </div>
+                
+                <button class="w-full bg-green-500 hover:bg-green-600 text-white px-8 py-5 rounded-lg font-bold text-xl shadow-lg hover-lift mb-4">
+                    🚀 Empezar mi Prueba Gratis Ahora
+                </button>
+                
+                <p class="text-sm text-gray-500">
+                    ✓ Sin tarjeta de crédito &nbsp;&nbsp; ✓ Configuración en 5 minutos &nbsp;&nbsp; ✓ Soporte dedicado por WhatsApp
+                </p>
+            </div>
+            
+            <div class="mt-12 grid md:grid-cols-3 gap-6 text-left">
+                <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-6">
+                    <div class="text-3xl mb-2">⚡</div>
+                    <h4 class="font-bold mb-2">Activación inmediata</h4>
+                    <p class="text-sm text-purple-100">Empieza a usar Mi Pana en menos de 5 minutos después de registrarte</p>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-6">
+                    <div class="text-3xl mb-2">🎓</div>
+                    <h4 class="font-bold mb-2">Onboarding personalizado</h4>
+                    <p class="text-sm text-purple-100">Te guiamos paso a paso hasta que domines todas las funciones</p>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-6">
+                    <div class="text-3xl mb-2">💬</div>
+                    <h4 class="font-bold mb-2">Soporte 7 días</h4>
+                    <p class="text-sm text-purple-100">Respuestas en menos de 2 horas por WhatsApp cuando nos necesites</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800">
+                Preguntas Frecuentes
+            </h2>
+            
+            <div class="space-y-4">
+                <details class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <summary class="font-bold text-lg text-gray-800 cursor-pointer">¿Necesito instalar algo en mi celular?</summary>
+                    <p class="mt-4 text-gray-600">No. Mi Pana funciona 100% por WhatsApp. Si ya tienes WhatsApp, no necesitas descargar nada más. Es como chatear con un contacto normal.</p>
+                </details>
+                
+                <details class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <summary class="font-bold text-lg text-gray-800 cursor-pointer">¿Funciona con cualquier celular?</summary>
+                    <p class="mt-4 text-gray-600">Sí. Funciona con cualquier celular que tenga WhatsApp: Android, iPhone, o incluso celulares básicos con WhatsApp Web.</p>
+                </details>
+                
+                <details class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <summary class="font-bold text-lg text-gray-800 cursor-pointer">¿Qué pasa con mi información? ¿Es segura?</summary>
+                    <p class="mt-4 text-gray-600">Toda tu información se guarda en tu cuenta personal de Google Sheets. Tú eres el dueño de tus datos. Nosotros solo procesamos la información que nos envías por WhatsApp y la organizamos automáticamente.</p>
+                </details>
+                
+                <details class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <summary class="font-bold text-lg text-gray-800 cursor-pointer">¿Puedo ver reportes desde mi celular?</summary>
+                    <p class="mt-4 text-gray-600">Sí. Puedes pedirle a Mi Pana por WhatsApp "envíame el reporte de la semana" y lo recibirás al instante. También puedes abrir tu Google Sheets desde cualquier dispositivo.</p>
+                </details>
+                
+                <details class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <summary class="font-bold text-lg text-gray-800 cursor-pointer">¿Qué pasa si me equivoco al registrar algo?</summary>
+                    <p class="mt-4 text-gray-600">Puedes corregir cualquier registro hablando con Mi Pana. Solo dile "el último registro estaba mal, eran 20 unidades no 15" y él lo corrige automáticamente.</p>
+                </details>
+                
+                <details class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <summary class="font-bold text-lg text-gray-800 cursor-pointer">¿Cuánto cuesta después de los 3 meses gratis?</summary>
+                    <p class="mt-4 text-gray-600">Solo $15 por mes. Puedes cancelar cuando quieras sin penalidades. Es menos de lo que gastas en un almuerzo, pero te ahorra horas de trabajo y te ayuda a recuperar dinero perdido.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="https://i.imgur.com/YourImageURL.png" alt="Mi Pana" class="w-10 h-10" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <div class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold" style="display:none">MP</div>
+                    <span class="text-xl font-bold">Mi pana</span>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    Tu negocio organizado por WhatsApp
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Producto</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#como-funciona" class="hover:text-white">Cómo Funciona</a></li>
+                    <li><a href="#beneficios" class="hover:text-white">Beneficios</a></li>
+                    <li><a href="#demo" class="hover:text-white">Demo</a></li>
+                    <li><a href="#cta" class="hover:text-white">Precios</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Recursos</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-white">Guía de Inicio</a></li>
+                    <li><a href="#" class="hover:text-white">Blog</a></li>
+                    <li><a href="#" class="hover:text-white">Tutoriales</a></li>
+                    <li><a href="#" class="hover:text-white">Soporte</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Legal</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li> <a href="#" id="open-terms" class="hover:text-white">Términos y Condiciones</a></li>
+                    <li><a href="#" class="hover:text-white">Política de Privacidad</a></li>
+                    <li><a href="#" class="hover:text-white">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Mi Pana. Todos los derechos reservados. Hecho con 💜 en Ecuador.</p>
+        </div>
+        </footer>
+        <!-- Términos y Condiciones Modal -->
+    <div id="terms-modal" class="fixed inset-0 hidden flex items-center justify-center p-4" style="z-index:9999;">
+    <!-- Fondo oscuro -->
+    <div id="terms-backdrop" class="absolute inset-0 bg-black/60" style="z-index:9998;"></div>
+
+    <!-- Contenido modal -->
+    <div class="relative bg-white rounded-2xl max-w-3xl w-full max-h-[80vh] overflow-auto p-6 mx-auto" style="z-index:10000;">
+        <!-- Botón cerrar -->
+        <button id="terms-close" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-2xl font-bold">✕</button>
+
+        <!-- Contenido real -->
+        <h1 class="text-2xl font-bold mb-4 gradient-text">Términos y Condiciones</h1>
+        <p class="text-sm text-gray-500 mb-6">Última actualización: Enero 2026</p>
+
+        <div class="space-y-4 text-gray-700">
+        <h2 class="text-lg font-semibold gradient-text">1. Aceptación de los términos</h2>
+        <p>Al acceder y utilizar este sistema, aceptas cumplir con estos términos. Si no estás de acuerdo, no uses el servicio.</p>
+
+        <h2 class="text-lg font-semibold gradient-text">2. Uso del servicio</h2>
+        <p>El sistema está diseñado para registro de inventario, ventas y reportes. El uso indebido o con fines ilegales está prohibido.</p>
+
+        <h2 class="text-lg font-semibold gradient-text">3. Información y datos</h2>
+        <p>La veracidad de los datos ingresados es responsabilidad del usuario. No garantizamos resultados si los datos son incorrectos.</p>
+
+        <h2 class="text-lg font-semibold gradient-text">4. Privacidad</h2>
+        <p>Nos comprometemos a proteger tu información y no compartirla con terceros sin autorización, salvo requerimiento legal.</p>
+
+        <h2 class="text-lg font-semibold gradient-text">5. Modificaciones</h2>
+        <p>Podemos actualizar estos términos en cualquier momento. Los cambios entrarán en vigencia al ser publicados.</p>
+
+        <h2 class="text-lg font-semibold gradient-text">6. Responsabilidad</h2>
+        <p>El servicio se entrega “tal cual”. No nos responsabilizamos por pérdidas económicas ni decisiones comerciales derivadas del uso del sistema.</p>
+        </div>
+
+        <!-- Footer con botón aceptar -->
+        <div class="mt-6 flex justify-end">
+        <button id="terms-accept" class="gradient-bg text-white px-6 py-2 rounded-xl font-semibold hover:opacity-90 transition">
+            Aceptar y Cerrar
+        </button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Script para abrir/cerrar -->
+    <script>
+    const openTerms = document.getElementById('open-terms');
+    const modal = document.getElementById('terms-modal');
+    const closeBtn = document.getElementById('terms-close');
+    const acceptBtn = document.getElementById('terms-accept');
+    const backdrop = document.getElementById('terms-backdrop');
+
+    // Abrir modal
+    openTerms.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+    });
+
+    // Cerrar modal
+    function cerrarModal(){
+        modal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+    }
+
+    closeBtn.addEventListener('click', cerrarModal);
+    acceptBtn.addEventListener('click', cerrarModal);
+    backdrop.addEventListener('click', cerrarModal);
+
+    // Cerrar con ESC
+    document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape' && !modal.classList.contains('hidden')) cerrarModal();
+    });
+    </script>
+
+</body>
+</html>
